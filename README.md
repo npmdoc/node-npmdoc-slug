@@ -1,11 +1,13 @@
-# api documentation for  [slug (v0.9.1)](https://github.com/dodo/node-slug)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-slug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-slug)
+# api documentation for  [slug (v0.9.1)](https://github.com/dodo/node-slug)  [![npm package](https://img.shields.io/npm/v/npmdoc-slug.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-slug) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-slug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-slug)
 #### slugifies even utf-8 chars!
 
 [![NPM](https://nodei.co/npm/slug.png?downloads=true)](https://www.npmjs.com/package/slug)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-slug/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-slug_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-slug/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-slug/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-slug_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-slug/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-slug/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-slug/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-slug/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
