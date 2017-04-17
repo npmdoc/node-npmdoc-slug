@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/dodo/node-slug"
-
-    >slug (v0.9.1)</a>
+    <a href="https://github.com/dodo/node-slug">slug (v0.9.1)</a>
 </h1>
 <h4>slugifies even utf-8 chars!</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.slug">module slug</a><ol>
 
@@ -167,16 +160,16 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function slug(string, opts) {
     string = string.toString();
-    if (&#x27;string&#x27; === typeof opts)
+    if ('string' === typeof opts)
         opts = {replacement:opts};
     opts = opts || {};
     opts.mode = opts.mode || slug.defaults.mode;
     var defaults = slug.defaults.modes[opts.mode];
-    var keys = [&#x27;replacement&#x27;,&#x27;multicharmap&#x27;,&#x27;charmap&#x27;,&#x27;remove&#x27;,&#x27;lower&#x27;];
-    for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
+    var keys = ['replacement','multicharmap','charmap','remove','lower'];
+    for (var key, i = 0, l = keys.length; i &lt; l; i++) { key = keys[i];
         opts[key] = (key in opts) ? opts[key] : defaults[key];
     }
-    if (&#x27;undefined&#x27; === typeof opts.symbols)
+    if ('undefined' === typeof opts.symbols)
         opts.symbols = defaults.symbols;
 
     var lengths = [];
@@ -189,8 +182,8 @@
             lengths.push(len);
     }
 
-    var code, unicode, result = &#x22;&#x22;;
-    for (var char, i = 0, l = string.length; i &#x3c; l; i++) { char = string[i];
+    var code, unicode, result = "";
+    for (var char, i = 0, l = string.length; i &lt; l; i++) { char = string[i];
         if (!lengths.some(function (len) {
             var str = string.substr(i, len);
             if (opts.multicharmap[str]) {
@@ -205,21 +198,21 @@
             } else {
                 code = string.charCodeAt(i);
             }
-            if (opts.symbols &#x26;&#x26; (unicode = symbols(code))) {
+            if (opts.symbols &amp;&amp; (unicode = symbols(code))) {
                 char = unicode.name.toLowerCase();
-                for(var j = 0, rl = removelist.length; j &#x3c; rl; j++) {
-                    char = char.replace(removelist[j], &#x27;&#x27;);
+                for(var j = 0, rl = removelist.length; j &lt; rl; j++) {
+                    char = char.replace(removelist[j], '');
                 }
-                char = char.replace(/^\s+|\s+$/g, &#x27;&#x27;);
+                char = char.replace(/^\s+|\s+$/g, '');
             }
         }
-        char = char.replace(/[^\w\s\-\.\_~]/g, &#x27;&#x27;); // allowed
-        if (opts.remove) char = char.replace(opts.remove, &#x27;&#x27;); // add flavour
+        char = char.replace(/[^\w\s\-\.\_~]/g, ''); // allowed
+        if (opts.remove) char = char.replace(opts.remove, ''); // add flavour
         result += char;
     }
-    result = result.replace(/^\s+|\s+$/g, &#x27;&#x27;); // trim leading/trailing spaces
+    result = result.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
     result = result.replace(/[-\s]+/g, opts.replacement); // convert spaces
-    result = result.replace(opts.replacement+&#x22;$&#x22;,&#x27;&#x27;); // remove trailing separator
+    result = result.replace(opts.replacement+"$",''); // remove trailing separator
     if (opts.lower)
       result = result.toLowerCase();
     return result;
@@ -238,15 +231,15 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function slug(string, opts) {
     string = string.toString();
-    if (&#x27;string&#x27; === typeof opts)
+    if ('string' === typeof opts)
         opts = {replacement:opts};
     opts = opts || {};
     opts.mode = opts.mode || slug.defaults.mode;
     var defaults = slug.defaults.modes[opts.mode];
-    [&#x27;replacement&#x27;,&#x27;multicharmap&#x27;,&#x27;charmap&#x27;,&#x27;remove&#x27;,&#x27;lower&#x27;].forEach(function (key) {
+    ['replacement','multicharmap','charmap','remove','lower'].forEach(function (key) {
         opts[key] = (key in opts) ? opts[key] : defaults[key];
     });
-    if (&#x27;undefined&#x27; === typeof opts.symbols)
+    if ('undefined' === typeof opts.symbols)
         opts.symbols = defaults.symbols;
     var lengths = [];
     Object.keys(opts.multicharmap).forEach(function (key) {
@@ -254,8 +247,8 @@
         if (lengths.indexOf(len) === -1)
             lengths.push(len);
     });
-    var code, unicode, result = &#x22;&#x22;;
-    for (var char, i = 0, l = string.length; i &#x3c; l; i++) { char = string[i];
+    var code, unicode, result = "";
+    for (var char, i = 0, l = string.length; i &lt; l; i++) { char = string[i];
         if (!lengths.some(function (len) {
             var str = string.substr(i, len);
             if (opts.multicharmap[str]) {
@@ -270,21 +263,21 @@
             } else {
                 code = string.charCodeAt(i);
             }
-            if (opts.symbols &#x26;&#x26; (unicode = symbols(code))) {
+            if (opts.symbols &amp;&amp; (unicode = symbols(code))) {
                 char = unicode.name.toLowerCase();
-                for(var j = 0, rl = removelist.length; j &#x3c; rl; j++) {
-                    char = char.replace(removelist[j], &#x27;&#x27;);
+                for(var j = 0, rl = removelist.length; j &lt; rl; j++) {
+                    char = char.replace(removelist[j], '');
                 }
-                char = char.replace(/^\s+|\s+$/g, &#x27;&#x27;);
+                char = char.replace(/^\s+|\s+$/g, '');
             }
         }
-        char = char.replace(/[^\w\s\-\.\_~]/g, &#x27;&#x27;); // allowed
-        if (opts.remove) char = char.replace(opts.remove, &#x27;&#x27;); // add flavour
+        char = char.replace(/[^\w\s\-\.\_~]/g, ''); // allowed
+        if (opts.remove) char = char.replace(opts.remove, ''); // add flavour
         result += char;
     }
-    result = result.replace(/^\s+|\s+$/g, &#x27;&#x27;); // trim leading/trailing spaces
+    result = result.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
     result = result.replace(/[-\s]+/g, opts.replacement); // convert spaces
-    result = result.replace(opts.replacement+&#x22;$&#x22;,&#x27;&#x27;); // remove trailing separator
+    result = result.replace(opts.replacement+"$",''); // remove trailing separator
     if (opts.lower)
       result = result.toLowerCase();
     return result;
@@ -305,22 +298,22 @@
     return text;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-_symbols = require(&#x27;unicode/category/So&#x27;);
-removelist = [&#x27;sign&#x27;,&#x27;cross&#x27;,&#x27;of&#x27;,&#x27;symbol&#x27;,&#x27;staff&#x27;,&#x27;hand&#x27;,&#x27;black
-&#x27;,&#x27;white&#x27;]
-    .map(function (word) {return new RegExp(word, &#x27;gi&#x27;)});
+_symbols = require('unicode/category/So');
+removelist = ['sign','cross','of','symbol','staff','hand','black
+','white']
+    .map(function (word) {return new RegExp(word, 'gi')});
 return _symbols[code];
 }
 
 function slug(string, opts) {
 string = string.<span class="apidocCodeKeywordSpan">toString</span>();
-if (&#x27;string&#x27; === typeof opts)
+if ('string' === typeof opts)
     opts = {replacement:opts};
 opts = opts || {};
 opts.mode = opts.mode || slug.defaults.mode;
 var defaults = slug.defaults.modes[opts.mode];
-var keys = [&#x27;replacement&#x27;,&#x27;multicharmap&#x27;,&#x27;charmap&#x27;,&#x27;remove&#x27;,&#x27;lower&#x27;];
-for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
+var keys = ['replacement','multicharmap','charmap','remove','lower'];
+for (var key, i = 0, l = keys.length; i &lt; l; i++) { key = keys[i];
 ...</pre></li>
     </ul>
 
@@ -346,15 +339,15 @@ for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function slug(string, opts) {
     string = string.toString();
-    if (&#x27;string&#x27; === typeof opts)
+    if ('string' === typeof opts)
         opts = {replacement:opts};
     opts = opts || {};
     opts.mode = opts.mode || slug.defaults.mode;
     var defaults = slug.defaults.modes[opts.mode];
-    [&#x27;replacement&#x27;,&#x27;multicharmap&#x27;,&#x27;charmap&#x27;,&#x27;remove&#x27;,&#x27;lower&#x27;].forEach(function (key) {
+    ['replacement','multicharmap','charmap','remove','lower'].forEach(function (key) {
         opts[key] = (key in opts) ? opts[key] : defaults[key];
     });
-    if (&#x27;undefined&#x27; === typeof opts.symbols)
+    if ('undefined' === typeof opts.symbols)
         opts.symbols = defaults.symbols;
     var lengths = [];
     Object.keys(opts.multicharmap).forEach(function (key) {
@@ -362,8 +355,8 @@ for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
         if (lengths.indexOf(len) === -1)
             lengths.push(len);
     });
-    var code, unicode, result = &#x22;&#x22;;
-    for (var char, i = 0, l = string.length; i &#x3c; l; i++) { char = string[i];
+    var code, unicode, result = "";
+    for (var char, i = 0, l = string.length; i &lt; l; i++) { char = string[i];
         if (!lengths.some(function (len) {
             var str = string.substr(i, len);
             if (opts.multicharmap[str]) {
@@ -378,21 +371,21 @@ for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
             } else {
                 code = string.charCodeAt(i);
             }
-            if (opts.symbols &#x26;&#x26; (unicode = symbols(code))) {
+            if (opts.symbols &amp;&amp; (unicode = symbols(code))) {
                 char = unicode.name.toLowerCase();
-                for(var j = 0, rl = removelist.length; j &#x3c; rl; j++) {
-                    char = char.replace(removelist[j], &#x27;&#x27;);
+                for(var j = 0, rl = removelist.length; j &lt; rl; j++) {
+                    char = char.replace(removelist[j], '');
                 }
-                char = char.replace(/^\s+|\s+$/g, &#x27;&#x27;);
+                char = char.replace(/^\s+|\s+$/g, '');
             }
         }
-        char = char.replace(/[^\w\s\-\.\_~]/g, &#x27;&#x27;); // allowed
-        if (opts.remove) char = char.replace(opts.remove, &#x27;&#x27;); // add flavour
+        char = char.replace(/[^\w\s\-\.\_~]/g, ''); // allowed
+        if (opts.remove) char = char.replace(opts.remove, ''); // add flavour
         result += char;
     }
-    result = result.replace(/^\s+|\s+$/g, &#x27;&#x27;); // trim leading/trailing spaces
+    result = result.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
     result = result.replace(/[-\s]+/g, opts.replacement); // convert spaces
-    result = result.replace(opts.replacement+&#x22;$&#x22;,&#x27;&#x27;); // remove trailing separator
+    result = result.replace(opts.replacement+"$",''); // remove trailing separator
     if (opts.lower)
       result = result.toLowerCase();
     return result;
@@ -422,22 +415,22 @@ for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-_symbols = require(&#x27;unicode/category/So&#x27;);
-removelist = [&#x27;sign&#x27;,&#x27;cross&#x27;,&#x27;of&#x27;,&#x27;symbol&#x27;,&#x27;staff&#x27;,&#x27;hand&#x27;,&#x27;black
-&#x27;,&#x27;white&#x27;]
-    .map(function (word) {return new RegExp(word, &#x27;gi&#x27;)});
+_symbols = require('unicode/category/So');
+removelist = ['sign','cross','of','symbol','staff','hand','black
+','white']
+    .map(function (word) {return new RegExp(word, 'gi')});
 return _symbols[code];
 }
 
 function slug(string, opts) {
 string = string.<span class="apidocCodeKeywordSpan">toString</span>();
-if (&#x27;string&#x27; === typeof opts)
+if ('string' === typeof opts)
     opts = {replacement:opts};
 opts = opts || {};
 opts.mode = opts.mode || slug.defaults.mode;
 var defaults = slug.defaults.modes[opts.mode];
-var keys = [&#x27;replacement&#x27;,&#x27;multicharmap&#x27;,&#x27;charmap&#x27;,&#x27;remove&#x27;,&#x27;lower&#x27;];
-for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
+var keys = ['replacement','multicharmap','charmap','remove','lower'];
+for (var key, i = 0, l = keys.length; i &lt; l; i++) { key = keys[i];
 ...</pre></li>
     </ul>
 
@@ -450,3 +443,4 @@ for (var key, i = 0, l = keys.length; i &#x3c; l; i++) { key = keys[i];
     ]
 </div>
 </div>
+</body></html>
