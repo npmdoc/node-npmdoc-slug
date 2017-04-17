@@ -1,9 +1,11 @@
 # api documentation for  [slug (v0.9.1)](https://github.com/dodo/node-slug)  [![npm package](https://img.shields.io/npm/v/npmdoc-slug.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-slug) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-slug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-slug)
 #### slugifies even utf-8 chars!
 
-[![NPM](https://nodei.co/npm/slug.png?downloads=true)](https://www.npmjs.com/package/slug)
+[![NPM](https://nodei.co/npm/slug.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/slug)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-slug/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-slug_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-slug/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-slug/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-slug/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-slug/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-slug/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-slug/build/screenCapture.npmPackageListing.svg)
 
@@ -63,13 +65,11 @@
     "main": "slug.js",
     "maintainers": [
         {
-            "name": "dodo",
-            "email": "dodo@blacksec.org"
+            "name": "dodo"
         }
     ],
     "name": "slug",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/dodo/node-slug.git"
@@ -80,19 +80,6 @@
     "version": "0.9.1"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module slug](#apidoc.module.slug)
-1.  object <span class="apidocSignatureSpan">slug.</span>charmap
-1.  object <span class="apidocSignatureSpan">slug.</span>defaults
-1.  object <span class="apidocSignatureSpan">slug.</span>multicharmap
-
-
-
-# <a name="apidoc.module.slug"></a>[module slug](#apidoc.module.slug)
 
 
 
