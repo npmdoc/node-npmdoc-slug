@@ -1,4 +1,7 @@
-# api documentation for  [slug (v0.9.1)](https://github.com/dodo/node-slug)  [![npm package](https://img.shields.io/npm/v/npmdoc-slug.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-slug) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-slug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-slug)
+# npmdoc-slug
+
+#### basic api documentation for  [slug (v0.9.1)](https://github.com/dodo/node-slug)  [![npm package](https://img.shields.io/npm/v/npmdoc-slug.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-slug) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-slug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-slug)
+
 #### slugifies even utf-8 chars!
 
 [![NPM](https://nodei.co/npm/slug.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/slug)
